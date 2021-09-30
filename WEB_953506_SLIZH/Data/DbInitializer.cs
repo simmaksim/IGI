@@ -37,6 +37,31 @@ namespace WEB_953506_SLIZH.Data
                 admin = await userManager.FindByEmailAsync("admin@mail.ru");
                 await userManager.AddToRoleAsync(admin, "admin");
             }
+            ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+            if (!context.Disciplines.Any())
+            {
+                context.Disciplines.AddRange(
+                    new List<Discipline>
+                    {
+                        new Discipline{DisciplineId=1, DisciplineName="Dota2"},
+                        new Discipline{DisciplineId=2, DisciplineName="CS:GO"}
+                    });
+                await context.SaveChangesAsync();
+            }
+            if (!context.Players.Any())
+            {
+                context.Players.AddRange(
+                    new List<Player>
+                    {
+                        new Player{NickName="S1mple", Team="Natus Vincere", Cost = 4450000, DisciplineId=2, Photo="Simple.jpg"},
+                        new Player{NickName="Device", Team="Ninjas in pyjamas", Cost = 3200000, DisciplineId=2, Photo="device.jpg"},
+                        new Player{NickName="Zywoo", Team="Vitality", Cost = 3750000, DisciplineId=2, Photo="Zywoo.jpg"},
+                        new Player{NickName="Arteezy", Team="Evil Geniuses", Cost = 2000000, DisciplineId=1, Photo="Arteezy.jpg"},
+                        new Player{NickName="Sumail", Team="OG", Cost = 5000000, DisciplineId=1, Photo="Sumail.jpg"},
+                        new Player{NickName="Miracle", Team="Nigma", Cost = 2800000, DisciplineId=1, Photo="Miracle.jpg"},
+                    });
+                await context.SaveChangesAsync();
+            }
         }
     }  
 }

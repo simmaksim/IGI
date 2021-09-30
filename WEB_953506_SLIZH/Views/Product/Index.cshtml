@@ -1,0 +1,96 @@
+﻿@model ListViewModel<Player>
+
+@{
+    ViewData["Title"] = "Меню";
+
+    var categories = ViewData["Disps"] as IEnumerable<Discipline>;
+    int currentGroup = (int)ViewData["CurrDisp"];
+
+    var text = currentGroup != 0
+        ? categories
+            .FirstOrDefault(g => g.DisciplineId == currentGroup)?
+            .DisciplineName
+        : "Все";
+}
+<div class="row">
+    <div class="col-2">
+        <div class="dropdown mt-2">
+            <a class="btn btn-secondary dropdown-toggle"
+               asp-action="Index" asp-controller="Product"
+               role="button"
+               id="dropdownMenuLink"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                @text
+            </a>
+            <div class="dropdown-menu"
+                 aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item"
+                   asp-action="Index"
+                   asp-controller="Product">Все</a>
+
+                @foreach (var item in categories)
+                {
+                    <a class="dropdown-item"
+                       asp-action="Index"
+                       asp-controller="Product"
+                       asp-route-group="@item.DisciplineId"
+                       asp-route-pageNo="1"
+                       >@item.DisciplineName</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="card-group" id="list">
+            <partial name="_ListPartial" model="@Model" />
+        </div>
+        <pager page-current="@Model.CurrentPage"
+               page-total="@Model.TotalPages"
+               action="Index"
+               controller="Product"
+               group-id="@currentGroup"></pager>
+    </div>
+</div>
+
+
+
+<!--
+<div class="row">
+    <div class="card-deck">
+        @foreach (var item in Model)
+        {
+            <div class='card m-2 p-1 text-center col-4'>
+                <img src="~/images/@item.Photo"
+                     alt='NoImage'
+                     class="card-img-top"/>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @item.NickName
+                    </h5>
+                    <p class="card-text">
+                        @item.Team
+                    </p>
+                    <div class="card-text badge badge-secondary">
+                        <h6>@item.Cost $</h6>
+                    </div>
+                    @{
+                    var request = ViewContext.HttpContext.Request;
+                    var returnUrl = request.Path + request.QueryString.ToUriComponent();
+                    }
+                    <p class="mt-2">
+                        <a asp-action="Add"
+                           asp-controller="Cart"
+                           asp-route-id="@item.PlayerId"
+                           asp-route-returnUrl="@returnUrl"
+                           class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> В корзину
+                        </a>
+                    </p>
+                </div>
+            </div>
+                    }
+                </div>
+            </div>
+-->
+
