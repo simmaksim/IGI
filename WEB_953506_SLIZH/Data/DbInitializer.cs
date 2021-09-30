@@ -43,8 +43,8 @@ namespace WEB_953506_SLIZH.Data
                 context.Disciplines.AddRange(
                     new List<Discipline>
                     {
-                        new Discipline{DisciplineId=1, DisciplineName="Dota2"},
-                        new Discipline{DisciplineId=2, DisciplineName="CS:GO"}
+                        new Discipline{DisciplineName="Dota2"},
+                        new Discipline{DisciplineName="CS:GO"}
                     });
                 await context.SaveChangesAsync();
             }
