@@ -7,6 +7,7 @@ using WEB_953506_SLIZH.Entities;
 using WEB_953506_SLIZH.Extensions;
 using WEB_953506_SLIZH.Models;
 using WEB_953506_SLIZH.Data;
+using Microsoft.Extensions.Logging;
 
 namespace WEB_953506_SLIZH.Controllers
 {
@@ -15,11 +16,13 @@ namespace WEB_953506_SLIZH.Controllers
         ApplicationDbContext _context;
 
         int _pageSize;
+        private ILogger _logger;
         
-        public ProductController(ApplicationDbContext context)
+        public ProductController(ApplicationDbContext context, ILogger<ProductController> logger)
         {
             _pageSize = 3;
             _context = context;
+            _logger = logger;
         }
 
         [Route("Catalog")]
@@ -31,6 +34,7 @@ namespace WEB_953506_SLIZH.Controllers
             ViewData["Disps"] = _context.Disciplines;
 
             ViewData["CurrDisp"] = group ?? 0;
+            _logger.LogInformation($"info: group={group}, page={pageNo}");
             var filteredPlayers = _context.Players.Where(d => !group.HasValue || d.DisciplineId == group.Value);
             var model = ListViewModel<Player>.GetModel(filteredPlayers, pageNo, _pageSize);
 

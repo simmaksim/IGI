@@ -1,0 +1,75 @@
+﻿@page "{id:int}"
+@model WEB_953506_SLIZH.Areas.Admin.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Player</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Player.PlayerId" />
+                <div class="form-group">
+                    @if (!string.IsNullOrEmpty(Model.Player.Photo))
+                     {
+                        <img src=~/Images/@Model.Player.Photo
+                             alt="NoSuchFile" width="150"/>
+                    }
+                    else
+                    {
+                        <h4>Файл изображения не задан</h4>
+                    }
+                </div>
+                <div class="custom-file mt-3">
+                    <input type="file" class="custom-file-input"
+                           asp-for="Player.Photo" id="customFile">
+                    <label class="custom-file-label" for="customFile">Выберите файл</label>
+                </div>
+
+            <div class="form-group">
+                <label asp-for="Player.NickName" class="control-label"></label>
+                <input asp-for="Player.NickName" class="form-control" />
+                <span asp-validation-for="Player.NickName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.Team" class="control-label"></label>
+                <input asp-for="Player.Team" class="form-control" />
+                <span asp-validation-for="Player.Team" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.Cost" class="control-label"></label>
+                <input asp-for="Player.Cost" class="form-control" />
+                <span asp-validation-for="Player.Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.Photo" class="control-label"></label>
+                <input asp-for="Player.Photo" class="form-control" />
+                <span asp-validation-for="Player.Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.DisciplineId" class="control-label"></label>
+                <select asp-for="Player.DisciplineId" class="form-control" asp-items="ViewBag.DisciplineId"></select>
+                <span asp-validation-for="Player.DisciplineId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/js/bs-custom-file-input.js"></script>
+        <script>
+            bsCustomFileInput.init();
+        </script>
+}

@@ -1,0 +1,74 @@
+﻿@page
+@model WEB_953506_SLIZH.Areas.Admin.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p class="mt-2">
+    <a asp-page="Create" class="btn btn-outline-info">
+        <span class="fa fa-plus-circle">Добавить</span>
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].NickName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].Team)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].Photo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].DisciplineName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Player) {
+        <tr>
+            <td>
+                <img src="~/images/@item.Photo" alt="NoImage" width="50"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NickName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisciplineName.DisciplineId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PlayerId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PlayerId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PlayerId">Delete</a>
+            </td>
+            <a asp-page="./Edit" asp-route-id="@item.PlayerId"
+               class="btn btn-outline-info">
+                <span class="fas fa-edit"></span>
+            </a>
+            <a asp-page="./Delete" asp-route-id="@item.PlayerId"
+               class="btn btn-outline-danger">
+                <span class="fas fa-trash-alt"></span>
+            </a>
+        </tr>
+}
+    </tbody>
+</table>
