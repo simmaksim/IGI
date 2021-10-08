@@ -1,0 +1,23 @@
+﻿@using WEB_953506_SLIZH.Blazor.Client.Components
+
+@page "/apidemo"
+@inject HttpClient client
+    <div class="container">
+        <PlayersList @bind-Players="@Players" SelectedObjectChanged="ShowDetails"></PlayersList>
+        <PlayerDetail @bind-Player="SelectedPlayer"></PlayerDetail>
+    </div>
+    @code {
+        [Parameter]
+        public IEnumerable<ListViewModel> Players { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            Players = await client.GetFromJsonAsync<IEnumerable<ListViewModel>>("api/players");
+        }
+        [Parameter]
+        public DetailViewModel SelectedPlayer { get; set; }
+        private async Task ShowDetails(int id)
+        {
+            SelectedPlayer = await client.GetFromJsonAsync<DetailViewModel>($"api/players/{id}");
+        }
+    }

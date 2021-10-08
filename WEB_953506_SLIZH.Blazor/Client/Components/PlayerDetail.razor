@@ -1,0 +1,22 @@
+﻿@if(Player!=null)
+ {
+    <img src="@photoSrc" class="img-thumbnail" width="150"/>
+    <div>
+        <p>@Player.NickName - @Player.Team</p>
+        <div class="badge badge-info ">@Player.Cost $</div>
+    </div>
+ }
+
+@code{
+    [Parameter]
+    public DetailViewModel Player { get; set; }
+    [Parameter]
+    public EventCallback<DetailViewModel> PlayerChanged { get; set; }
+    string photoSrc
+    {
+        get
+        {
+            return $"images/{Player.Photo}";
+        }
+    }
+}

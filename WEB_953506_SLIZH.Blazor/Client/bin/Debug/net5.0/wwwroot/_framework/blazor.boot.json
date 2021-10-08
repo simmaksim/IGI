@@ -196,12 +196,12 @@
       "netstandard.dll": "sha256-5TcSqPhm3fAT6s3NH7+BMGakcfGgZGd3\/\/cVwVs2VPI=",
       "System.Private.CoreLib.dll": "sha256-VJv3DLM\/G0m\/RnTeWL9X8mkbxlsn8nNRhm0BHYEY+uo=",
       "WEB_953506_SLIZH.Blazor.Shared.dll": "sha256-NfQ6xWa1RLymXwPWwWnwcB64hVn4eWKajvtocqgSlfY=",
-      "WEB_953506_SLIZH.Blazor.Client.dll": "sha256-ViFjj8uXR4ymygZ5mNnoxUa3opCPrp+gxRUqB8kAEx4="
+      "WEB_953506_SLIZH.Blazor.Client.dll": "sha256-zjkZVzNYM9tsI+UuwgToC4+nml22SA+EOBoyBbCWtrA="
     },
     "lazyAssembly": null,
     "pdb": {
       "WEB_953506_SLIZH.Blazor.Shared.pdb": "sha256-16N+wDP+slhrYn5jteq95XxQKUyfG+uQ3NqaVNhJMio=",
-      "WEB_953506_SLIZH.Blazor.Client.pdb": "sha256-Zbt+P8CTl9nmT8Cwaeg2CaLtAc5k6hn2aBwzjEpZGkI="
+      "WEB_953506_SLIZH.Blazor.Client.pdb": "sha256-JobsKJYlYZg6V2k2bM9DHMI9nUs1OuTd3X66Tl6MDqA="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-PvlHrby1PYtdX46ITs6pB8iDNqXNcewh8Eoa\/Gm2+GM=",

@@ -80,6 +80,13 @@ using WEB_953506_SLIZH.Blazor.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Client\_Imports.razor"
+using WEB_953506_SLIZH.Blazor.Client.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Client\Pages\FetchData.razor"
 using WEB_953506_SLIZH.Blazor.Shared;
 

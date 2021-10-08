@@ -82,6 +82,13 @@ using WEB_953506_SLIZH.Blazor.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Client\_Imports.razor"
+using WEB_953506_SLIZH.Blazor.Client.Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +97,7 @@ using WEB_953506_SLIZH.Blazor.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Client\Shared\NavMenu.razor"
+#line 34 "C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
