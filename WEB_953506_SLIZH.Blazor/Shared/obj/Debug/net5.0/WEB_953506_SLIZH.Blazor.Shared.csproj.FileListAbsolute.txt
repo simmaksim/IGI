@@ -1,0 +1,12 @@
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\bin\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.deps.json
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\bin\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.dll
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\bin\Debug\net5.0\ref\WEB_953506_SLIZH.Blazor.Shared.dll
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\bin\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.pdb
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.AssemblyInfo.cs
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.dll
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\ref\WEB_953506_SLIZH.Blazor.Shared.dll
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.pdb
+C:\Users\Dell\Desktop\IGI\WEB_953506_SLIZH.Blazor\Shared\obj\Debug\net5.0\WEB_953506_SLIZH.Blazor.Shared.csproj.AssemblyReference.cache

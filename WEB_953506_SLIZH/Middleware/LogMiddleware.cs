@@ -22,7 +22,7 @@ namespace WEB_953506_SLIZH.Middleware
             if (context.Response.StatusCode != StatusCodes.Status200OK)
             {
                 var path = context.Request.Path + context.Request.QueryString;
-                //_logger.LogInformation($"Request {path} returns status code {context.Response.StatusCode.ToString()}");
+                _logger.LogInformation($"Request {path} returns status code {context.Response.StatusCode.ToString()}");
             }
         }
     }

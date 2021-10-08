@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_953506_SLIZH", "WEB_953506_SLIZH.csproj", "{D74BABBF-E326-4151-9D44-C1F4CA5250A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_953506_SLIZH", "WEB_953506_SLIZH.csproj", "{D74BABBF-E326-4151-9D44-C1F4CA5250A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_953506_SLIZH.Blazor.Server", "..\WEB_953506_SLIZH.Blazor\Server\WEB_953506_SLIZH.Blazor.Server.csproj", "{8F0B9239-5E60-41E0-BC31-7CE9D687E598}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_953506_SLIZH.Blazor.Client", "..\WEB_953506_SLIZH.Blazor\Client\WEB_953506_SLIZH.Blazor.Client.csproj", "{2A561F65-2FF0-41D2-A864-1988C6B30F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_953506_SLIZH.Blazor.Shared", "..\WEB_953506_SLIZH.Blazor\Shared\WEB_953506_SLIZH.Blazor.Shared.csproj", "{4FFC86C9-2C7A-4549-A94A-B3B67B298AE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{D74BABBF-E326-4151-9D44-C1F4CA5250A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D74BABBF-E326-4151-9D44-C1F4CA5250A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D74BABBF-E326-4151-9D44-C1F4CA5250A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0B9239-5E60-41E0-BC31-7CE9D687E598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0B9239-5E60-41E0-BC31-7CE9D687E598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0B9239-5E60-41E0-BC31-7CE9D687E598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0B9239-5E60-41E0-BC31-7CE9D687E598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A561F65-2FF0-41D2-A864-1988C6B30F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A561F65-2FF0-41D2-A864-1988C6B30F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A561F65-2FF0-41D2-A864-1988C6B30F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A561F65-2FF0-41D2-A864-1988C6B30F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFC86C9-2C7A-4549-A94A-B3B67B298AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFC86C9-2C7A-4549-A94A-B3B67B298AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFC86C9-2C7A-4549-A94A-B3B67B298AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFC86C9-2C7A-4549-A94A-B3B67B298AE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
